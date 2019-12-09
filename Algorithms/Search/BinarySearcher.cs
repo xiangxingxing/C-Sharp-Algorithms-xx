@@ -77,7 +77,7 @@ namespace Algorithms.Search
         /// <returns>true if iteration can proceed to the next item, false otherwise</returns>
         public bool MoveNext()
         {
-            _currentItemIndex = this._leftIndex + (this._rightIndex - this._leftIndex) / 2;
+            _currentItemIndex = _leftIndex + (_rightIndex - _leftIndex) / 2;
 
             if (_comparer.Compare(_item, Current) < 0)
             {

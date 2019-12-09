@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Al
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{78061D74-A872-4D4B-AF06-92EAC2EDF185}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{E4077A34-1C2C-4C02-B456-98FC5BD45B9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{78061D74-A872-4D4B-AF06-92EAC2EDF185}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78061D74-A872-4D4B-AF06-92EAC2EDF185}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78061D74-A872-4D4B-AF06-92EAC2EDF185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4077A34-1C2C-4C02-B456-98FC5BD45B9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4077A34-1C2C-4C02-B456-98FC5BD45B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4077A34-1C2C-4C02-B456-98FC5BD45B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4077A34-1C2C-4C02-B456-98FC5BD45B9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
