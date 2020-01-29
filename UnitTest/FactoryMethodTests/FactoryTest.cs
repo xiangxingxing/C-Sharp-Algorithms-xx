@@ -8,9 +8,7 @@ namespace UnitTest.FactoryMethodTests
         [Fact]
         public void Factory_Create_Test()
         {
-            ICountryFactory factory = null;
-            
-            factory = new ChinaFactory();
+            ICountryFactory factory = new ChinaFactory();
             var league = factory.CreateLeague();
             var message = league.Display();
             Assert.True(message == "In CBA, logo is Yao");
