@@ -11,7 +11,7 @@ namespace UnitTest.FactoryMethodTests
             ICountryFactory factory = new ChinaFactory();
             var league = factory.CreateLeague();
             var message = league.Display();
-            Assert.True(message == "In CBA, logo is Yao");
+            Assert.Contains("logo is Yao", message);
             
             factory = new UsaFactory();
             var league2 = factory.CreateLeague();
