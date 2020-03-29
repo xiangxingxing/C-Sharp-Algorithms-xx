@@ -16,8 +16,8 @@ namespace DataStructures.Lists
         private DLinkedListNode<T> _previous;
 
         public DLinkedListNode() : this(default(T)) { }
-        public DLinkedListNode(T dataItem) : this(dataItem, null, null) { }
-        public DLinkedListNode(T dataItem, DLinkedListNode<T> next, DLinkedListNode<T> previous)
+
+        public DLinkedListNode(T dataItem, DLinkedListNode<T> next = null, DLinkedListNode<T> previous = null)
         {
             Data = dataItem;
             Next = next;
