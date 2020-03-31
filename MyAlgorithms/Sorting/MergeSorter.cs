@@ -2,6 +2,12 @@ using System.Collections.Generic;
 
 namespace MyAlgorithms.Sorting
 {
+    /// <summary>
+    /// 2路归并排序：将两个或两个以上的有序表组成一个新的有序表
+    /// 稳定：不会改变相关关键字记录的相对次序
+    /// 空间效率：辅助空间为n个单元 -> O(n)
+    /// 时间效率：O(n*log2(n))
+    /// </summary>
     public static class MergeSorter
     {
         public static List<T> MergeSort<T>(this List<T> collection, Comparer<T> comparer = null)
@@ -11,6 +17,7 @@ namespace MyAlgorithms.Sorting
             return InternalMergeSort(collection, comparer);
         }
 
+        // 分治
         private static List<T> InternalMergeSort<T>(List<T> collection, Comparer<T> comparer)
         {
             if (collection.Count < 2)
@@ -28,6 +35,7 @@ namespace MyAlgorithms.Sorting
             return InternalMerge(leftCollection, rightCollection, comparer);
         }
 
+        // Merge two collections into an ordered.
         private static List<T> InternalMerge<T>(IReadOnlyList<T> leftCollection, IReadOnlyList<T> rightCollection, IComparer<T> comparer)
         {
             var left = 0;
