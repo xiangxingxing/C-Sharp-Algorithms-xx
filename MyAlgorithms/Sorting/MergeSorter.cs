@@ -38,9 +38,9 @@ namespace MyAlgorithms.Sorting
         // Merge two collections into an ordered.
         private static List<T> InternalMerge<T>(IReadOnlyList<T> leftCollection, IReadOnlyList<T> rightCollection, IComparer<T> comparer)
         {
-            var left = 0;
-            var right = 0;
-            var index = 0;
+            var left = 0; // 第一个数组的索引
+            var right = 0; // 第二个数组的索引
+            var index = 0; // result数组的索引
             var length = leftCollection.Count + rightCollection.Count;
             var result = new List<T>(length);
 

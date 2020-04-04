@@ -43,8 +43,14 @@ namespace MyAlgorithms.Sorting
             }
         }
 
-        // 大顶堆调整
-        // node : 分支节点
+        /// <summary>
+        /// 大顶堆调整
+        /// </summary>
+        /// <param name="collection"></param>
+        /// <param name="node">需要调整的分支节点</param>
+        /// <param name="lastIndex">数组的最大索引，为了限制左右孩子索引</param>
+        /// <param name="comparer"></param>
+        /// <typeparam name="T"></typeparam>
         private static void HeapAdjust<T>(this IList<T> collection, int node, int lastIndex, Comparer<T> comparer)
         {
             var leftChild = node * 2 + 1;
@@ -64,6 +70,7 @@ namespace MyAlgorithms.Sorting
             if (largest != node)
             {
                 collection.Swap(largest, node);
+                // largest位置的数值发生改变，需要再次堆调整
                 collection.HeapAdjust(largest, lastIndex, comparer);
             }
         }
