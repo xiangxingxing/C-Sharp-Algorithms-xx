@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using DesignPatterns.BridgePattern;
 using DesignPatterns.ObservablePattern;
@@ -8,7 +9,10 @@ namespace DesignPatterns
     {
         public static void Main(string[] args)
         {
-            ObservableTest();
+            //ObservableTest();
+            //var res = NumberOfOne(9);
+            var res = (-1112 >> 1);
+            Console.WriteLine(res);
         }
 
         private static void BridgeTest()
@@ -39,6 +43,34 @@ namespace DesignPatterns
             
             coffee.OnCatAction();
             boolCat.OnCatAction();
+        }
+
+        private static void SymbolTest()
+        {
+            var number = 19;
+            var value = (number & 1) == 1;// &1 =1表示为奇数
+            Console.WriteLine($"{number} 为奇数:{value}");
+            
+            var number2 = 30;
+            var value2 = (number2 & 1) == 1;
+            Console.WriteLine($"{number2} 为奇数:{value2}");
+        }
+
+        private static int NumberOfOne(int n)
+        {
+            var count = 0;
+            var flag = 1;
+            while (flag > 0)
+            {
+                if ((flag & n) > 0)
+                {
+                    count++;
+                }
+
+                flag <<= 1;
+            }
+
+            return count;
         }
     }
 }

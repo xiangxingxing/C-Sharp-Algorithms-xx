@@ -32,6 +32,7 @@ namespace MyAlgorithms.Sorting
             var j = right;
             // var pivot = (left + right) / 2; ❌ 这样写，在判断语句中取list[pivot]时，该位置的值可能会变；
             var pivot = list[(left + right) / 2]; // 应该和最初始的这个值 "list[(left + right) / 2]"进行比较
+            //var pivot = list[(left + right) >> 1]; 整数右移一位 = 除以 2
 
             while (i <= j) // 使用等号 =
             {
@@ -45,7 +46,7 @@ namespace MyAlgorithms.Sorting
                     j--;
                 }
 
-                if (i <= j)
+                if (i <= j) // 使用等号 =
                 {
                     list.Swap(i, j);
                     i++;
