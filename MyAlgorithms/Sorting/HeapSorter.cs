@@ -34,7 +34,7 @@ namespace MyAlgorithms.Sorting
         // 构造初始大顶堆
         private static void BuildMaxHeap<T>(this IList<T> collection, Comparer<T> comparer)
         {
-            var lastNodeWithChild = collection.Count / 2;
+            var lastNodeWithChild = collection.Count >> 1;// 相当于 collection.Count / 2
             var lastIndex = collection.Count - 1;
             // 从后往前遍历所有的分支节点，进行堆调整
             for (var i = lastNodeWithChild; i >= 0; i--)
