@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using MyAlgorithms.Common;
 
 namespace MyAlgorithms.Sorting
 {
@@ -26,6 +25,7 @@ namespace MyAlgorithms.Sorting
             }
         }
 
+        // 按某种规则，将列表划分为前一半和后一半的类型
         private static int Partition<T>(this List<T> list, int left, int right, Comparer<T> comparer)
         {
             var pivot = list[left];
