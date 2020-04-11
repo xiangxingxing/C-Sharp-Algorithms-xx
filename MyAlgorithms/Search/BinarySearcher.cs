@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 
 namespace MyAlgorithms.Search
 {
     public static class BinarySearcher
     {
-        public static int MyBinarySearch<T>(this List<T> list, T key, Comparer<T> comparer = null)
+        public static int MyBinarySearch<T>(this List<T> list, T key, Comparer<T> comparer = null) where T : IComparable
         {
             var low = 0;
             var high = list.Count - 1;
@@ -14,6 +15,7 @@ namespace MyAlgorithms.Search
         }
 
         private static int MyBinarySearch<T>(this List<T> list, T key, int low, int high, Comparer<T> comparer)
+            where T : IComparable
         {
             while (low <= high)
             {

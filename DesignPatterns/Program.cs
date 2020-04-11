@@ -67,7 +67,7 @@ namespace DesignPatterns
                     count++;
                 }
 
-                flag <<= 1;
+                flag <<= 1;//左移32次
             }
 
             return count;
