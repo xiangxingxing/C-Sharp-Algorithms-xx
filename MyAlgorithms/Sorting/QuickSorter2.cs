@@ -29,7 +29,7 @@ namespace MyAlgorithms.Sorting
         private static int Partition<T>(this List<T> list, int left, int right, Comparer<T> comparer)
         {
             var pivot = list[left];
-            while (left < right)
+            while (left < right) // 无等号
             {
                 while (left < right && comparer.Compare(list[right], pivot) >= 0)
                 {
