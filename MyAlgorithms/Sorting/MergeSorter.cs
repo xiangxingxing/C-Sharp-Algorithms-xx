@@ -22,7 +22,7 @@ namespace MyAlgorithms.Sorting
         {
             if (collection.Count < 2)
             {
-                return collection;
+                return collection;//仅含一个元素时返回
             }
 
             var midIndex = collection.Count / 2;
@@ -35,7 +35,7 @@ namespace MyAlgorithms.Sorting
             return InternalMerge(leftCollection, rightCollection, comparer);
         }
 
-        // Merge two collections into an ordered.
+        // 将两个有序的顺序表合并成一个新的有序表
         private static List<T> InternalMerge<T>(IReadOnlyList<T> leftCollection, IReadOnlyList<T> rightCollection, IComparer<T> comparer)
         {
             var left = 0; // 第一个数组的索引
