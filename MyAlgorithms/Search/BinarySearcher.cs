@@ -14,6 +14,7 @@ namespace MyAlgorithms.Search
             return indexOfKey;
         }
 
+        //其实Comparer和 where T : IComparable有一个就行了
         private static int MyBinarySearch<T>(this List<T> list, T key, int low, int high, Comparer<T> comparer)
             where T : IComparable
         {
