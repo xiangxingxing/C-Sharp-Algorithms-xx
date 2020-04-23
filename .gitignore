@@ -191,6 +191,7 @@ _Pvt_Extensions/
 ModelManifest.xml
 .vs/
 .idea/
+*.DS_Store
 
 # Local test runner
 testrunner

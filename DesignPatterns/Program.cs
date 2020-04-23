@@ -10,9 +10,8 @@ namespace DesignPatterns
         public static void Main(string[] args)
         {
             //ObservableTest();
-            //var res = NumberOfOne(9);
-            var res = (-1112 >> 1);
-            Console.WriteLine(res);
+            var res = int.TryParse("123", out var number);
+            Console.WriteLine($"{res}:{number}");
         }
 
         private static void BridgeTest()
@@ -54,23 +53,6 @@ namespace DesignPatterns
             var number2 = 30;
             var value2 = (number2 & 1) == 1;
             Console.WriteLine($"{number2} 为奇数:{value2}");
-        }
-
-        private static int NumberOfOne(int n)
-        {
-            var count = 0;
-            var flag = 1;
-            while (flag > 0)
-            {
-                if ((flag & n) > 0)
-                {
-                    count++;
-                }
-
-                flag <<= 1;//左移32次
-            }
-
-            return count;
         }
     }
 }

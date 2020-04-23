@@ -5,7 +5,7 @@ namespace DesignPatterns.FactoryMethod
         BasketballLeague CreateLeague();
     }
     
-    public class ChinaFactory : ICountryFactory
+    internal class ChinaFactory : ICountryFactory
     {
         public BasketballLeague CreateLeague()
         {
@@ -13,7 +13,7 @@ namespace DesignPatterns.FactoryMethod
         }
     }
     
-    public class UsaFactory : ICountryFactory
+    internal class UsaFactory : ICountryFactory
     {
         public BasketballLeague CreateLeague()
         {
