@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAlgorithms", "MyAlgorithms\MyAlgorithms.csproj", "{656693B7-151E-456D-B3E1-7410357557F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineTest", "OnlineTest\OnlineTest.csproj", "{513202F4-E657-47B7-B297-CFBF5372D3CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{656693B7-151E-456D-B3E1-7410357557F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{656693B7-151E-456D-B3E1-7410357557F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{656693B7-151E-456D-B3E1-7410357557F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{513202F4-E657-47B7-B297-CFBF5372D3CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{513202F4-E657-47B7-B297-CFBF5372D3CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{513202F4-E657-47B7-B297-CFBF5372D3CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{513202F4-E657-47B7-B297-CFBF5372D3CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

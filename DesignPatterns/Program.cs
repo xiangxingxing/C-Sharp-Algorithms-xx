@@ -9,10 +9,11 @@ namespace DesignPatterns
     {
         public static void Main(string[] args)
         {
-            //ObservableTest();
-            var res = int.TryParse("123", out var number);
-            Console.WriteLine($"{res}:{number}");
+            ObservableTest();
+             var res = int.TryParse("123", out var number);
+             Console.WriteLine($"{res}:{number}");
         }
+        
 
         private static void BridgeTest()
         {
