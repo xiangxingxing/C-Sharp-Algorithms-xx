@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using DesignPatterns.BridgePattern;
 using DesignPatterns.ObservablePattern;
 
@@ -9,9 +10,13 @@ namespace DesignPatterns
     {
         public static void Main(string[] args)
         {
-            ObservableTest();
-             var res = int.TryParse("123", out var number);
-             Console.WriteLine($"{res}:{number}");
+            //ObservableTest();    
+             // var res = int.TryParse("123", out var number);
+             // Console.WriteLine($"{res}:{number}");
+             int[] temp = {};
+             int[] numbers = {1,2,3,4,5,6};
+             temp = numbers.Skip(0).Take(4).ToArray();
+             
         }
         
 
