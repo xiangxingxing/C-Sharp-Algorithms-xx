@@ -20,5 +20,13 @@ namespace UnitTest.NowCodeTests
             Assert.True(NowCoder.IsPrime(5));
             Assert.True(!NowCoder.IsPrime(6));
         }
+
+        [Fact]
+        public void ThirdNumber_Test()
+        {
+            int[] number = {87, 45, 78, 32, 17, 65, 53, 09};
+            var res = NowCoder.ThirdNumber(number);
+            Assert.Equal(32, res);
+        }
     }
 }
