@@ -22,20 +22,20 @@ namespace OnlineTest
 
     class Program
     {
-        static void Main(string[] args)
-        {
-            //OjInOutput();
-            //OjInOutput2();
-            //OjInOutput3();
-            //OjInOutput4();
-            //OjInOutput5();
-            //OjInOutput6();
-            //OjInOutput7();
-            //StringSort1();
-            //StringSort2();
-            //StringSort3();
-            
-        }
+        // static void Main(string[] args)
+        // {
+        //     //OjInOutput();
+        //     //OjInOutput2();
+        //     //OjInOutput3();
+        //     //OjInOutput4();
+        //     //OjInOutput5();
+        //     //OjInOutput6();
+        //     //OjInOutput7();
+        //     //StringSort1();
+        //     //StringSort2();
+        //     //StringSort3();
+        //     
+        // }
 
         private static void LastTest()
         {
