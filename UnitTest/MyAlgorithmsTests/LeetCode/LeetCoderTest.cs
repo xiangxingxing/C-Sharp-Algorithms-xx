@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using MyAlgorithms.LeetCode;
 using Xunit;
 
@@ -15,6 +17,22 @@ namespace UnitTest.MyAlgorithmsTests.LeetCode
             var input2 = -12321;
             var isPal2 = LeetCoder.IsPalindrome(input2);
             Assert.False(isPal2);
+        }
+
+        [Fact]
+        public void LeetCode22_Test()
+        {
+            var list = LeetCoder.GenerateParenthesis(3);
+            var expected = new List<string>
+            {
+                "((()))",
+                "(()())",
+                "(())()",
+                "()(())",
+                "()()()"
+            };
+
+            Assert.True(expected.SequenceEqual(list));
         }
     }
 }
