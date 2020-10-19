@@ -11,7 +11,7 @@ namespace MyAlgorithms.Sorting
             collection.BubbleSortAscending(comparer);
         }
 
-        private static void BubbleSortAscending<T>(this IList<T> collection, Comparer<T> comparer)
+        private static void BubbleSortAscending<T>(this IList<T> collection, IComparer<T> comparer)
         {
             for (var i = 0; i < collection.Count; i++)
             {
