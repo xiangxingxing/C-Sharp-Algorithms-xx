@@ -12,7 +12,7 @@ namespace DesignPatterns.ObservablePattern
         }
 
         public abstract void OnCatAction();
-        public abstract event Action CatAction;
+        public Action CatAction;
     }
 
     public class CoffeeCat : Cat
@@ -27,7 +27,7 @@ namespace DesignPatterns.ObservablePattern
             CatAction?.Invoke();
         }
 
-        public override event Action CatAction;
+        //public override event Action CatAction;
     }
 
     public class BoolCat : Cat
@@ -42,6 +42,6 @@ namespace DesignPatterns.ObservablePattern
             CatAction?.Invoke();
         }
 
-        public override event Action CatAction;
+        //public override event Action CatAction;
     }
 }
