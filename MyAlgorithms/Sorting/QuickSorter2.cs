@@ -11,23 +11,13 @@ namespace MyAlgorithms.Sorting
             list.QuickSort2(left, right);
         }
 
+
+        // 按某种规则，将列表划分为前一半和后一半的类型
         private static void QuickSort2<T>(this List<T> list, int left, int right, Comparer<T> comparer = null)
         {
             comparer = comparer ?? Comparer<T>.Default;
-
-            if (left < right)
-            {
-                var pivot = list.Partition(left, right, comparer);
-                //list.QuickSort2(left, pivot, comparer); ❌ pivot每次得减少1
-                //list.QuickSort2(pivot, right, comparer); ❌ pivot每次得减少1
-                list.QuickSort2(left, pivot - 1, comparer);
-                list.QuickSort2(pivot + 1, right, comparer);
-            }
-        }
-
-        // 按某种规则，将列表划分为前一半和后一半的类型
-        private static int Partition<T>(this List<T> list, int left, int right, Comparer<T> comparer)
-        {
+            var start = left;
+            var end = right;
             var pivot = list[left];
             while (left < right) // 无等号
             {
@@ -47,7 +37,11 @@ namespace MyAlgorithms.Sorting
             }
 
             list[left] = pivot;
-            return left;
+            if (start < end)
+            {
+                list.QuickSort2(left + 1, end);
+                list.QuickSort2(start , left - 1);
+            }
         }
     }
 }

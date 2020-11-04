@@ -4,6 +4,7 @@ using System.Linq;
 using DesignPatterns.AbstractFactoryPattern;
 using DesignPatterns.BridgePattern;
 using DesignPatterns.ObservablePattern;
+using DesignPatterns.Strategy;
 
 namespace DesignPatterns
 {
@@ -18,7 +19,8 @@ namespace DesignPatterns
              //int[] numbers = {1,2,3,4,5,6};
              //temp = numbers.Skip(0).Take(4).ToArray();
              //ObservableTest();
-             AbstractFactoryTest();
+             //AbstractFactoryTest();
+             StrategyTest();
         }
         
 
@@ -74,6 +76,19 @@ namespace DesignPatterns
             Console.WriteLine(orc.CreateArmy().GetDescription());
             Console.WriteLine(orc.CreateKing().GetDescription());
             Console.WriteLine(orc.CreateCastle().GetDescription());
+        }
+
+        private static void StrategyTest()
+        {
+            var dragonSlayer = new DragonSlayer(new MeleeStrategy());
+            dragonSlayer.Battle();
+            
+            dragonSlayer.ChangeStrategy(new ProjectileStrategy());
+            dragonSlayer.Battle();
+            
+            dragonSlayer.ChangeStrategy(new SpellStrategy());
+            dragonSlayer.Battle();
+
         }
     }
 }

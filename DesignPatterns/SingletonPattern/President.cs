@@ -17,7 +17,7 @@ namespace DesignPatterns.SingletonPattern
 
         private class Nested
         {
-            internal static readonly T Instance;
+            public static readonly T Instance;
 
             static Nested()
             {
@@ -27,6 +27,11 @@ namespace DesignPatterns.SingletonPattern
     }
 
     public class FrenchPresident : President
+    {
+        
+    }
+    
+    public class UsaPresident : President
     {
         
     }
