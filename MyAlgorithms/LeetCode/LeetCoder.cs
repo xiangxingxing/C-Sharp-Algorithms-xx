@@ -5,6 +5,28 @@ namespace MyAlgorithms.LeetCode
 {
     public static class LeetCoder
     {
+        //02.给出两个 非空 的链表用来表示两个非负的整数,求和
+        public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+        {
+            var pop = 0;
+            var dummy = new ListNode(0);
+            var tail = dummy;
+            while (l1 != null || l2 != null || pop != 0)
+            {
+                var x = l1?.val ?? 0;
+                var y = l2?.val ?? 0;
+                var sum = x + y + pop;
+                pop = sum / 10;
+                tail.next = new ListNode(sum % 10);
+                tail = tail.next;
+
+                l1 = l1?.next;
+                l2 = l2?.next;
+            }
+
+            return dummy.next;
+        }
+
         //leetCode09 判断一个整数是否是回文
         public static bool IsPalindrome(int number)
         {
@@ -56,6 +78,18 @@ namespace MyAlgorithms.LeetCode
             if (right > 0)
             {
                 Dfs(curStr + ")", left, right - 1, result);
+            }
+        }
+        
+        public class ListNode
+        {
+            internal ListNode next;
+            internal int val;
+
+            internal ListNode(int val, ListNode next = null)
+            {
+                this.val = val;
+                this.next = next;
             }
         }
     }

@@ -4,9 +4,9 @@ namespace DesignPatterns.SingletonPattern
     {
     }
 
-    public class Singleton<T> where T : President, new()
+    public abstract class Singleton<T> where T : Singleton<T>, new()
     {
-        private Singleton()
+        protected Singleton()
         {
         }
 
@@ -26,12 +26,12 @@ namespace DesignPatterns.SingletonPattern
         }
     }
 
-    public class FrenchPresident : President
+    public class FrenchPresident : Singleton<FrenchPresident>
     {
         
     }
     
-    public class UsaPresident : President
+    public class UsaPresident : Singleton<UsaPresident>
     {
         
     }
