@@ -2,7 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DesignPatterns.AbstractFactoryPattern;
+using DesignPatterns.Behavior.Command;
+using DesignPatterns.Behavior.Command.Cmds;
 using DesignPatterns.BridgePattern;
+using DesignPatterns.BridgePattern.Example2;
 using DesignPatterns.ObservablePattern;
 using DesignPatterns.Strategy;
 
@@ -20,9 +23,13 @@ namespace DesignPatterns
              //temp = numbers.Skip(0).Take(4).ToArray();
              //ObservableTest();
              //AbstractFactoryTest();
-             StrategyTest();
+             //StrategyTest();
+             //Bridge2Test();
+             CommandTest();
         }
-        
+
+
+        #region Bridge
 
         private static void BridgeTest()
         {
@@ -40,6 +47,39 @@ namespace DesignPatterns
             apple.Run();
             huaWei.Run();
         }
+
+        private static void Bridge2Test()
+        {
+            var materialsOfCoffee = new List<IMaterial>{new Pearl(), new Sugar()};
+            var coffee = new Coffee(materialsOfCoffee);
+            coffee.Make();
+            
+            var materialsOfJuice = new List<IMaterial>{new Mango(), new RedBean()};
+            var juice = new Juice(materialsOfJuice);
+            juice.Make();
+
+        }
+
+        #endregion
+
+        #region Command
+
+        private static void CommandTest()
+        {
+            var cmdManager = CommandManager.Instance();
+            var play = new PlayCommand();
+            var pause = new PauseCommand();
+            var final = new FinalCommand();
+            
+            cmdManager.AddCommands(new ICommand[]{play, pause, final});
+            Console.WriteLine("Start:");
+            cmdManager.Operate();
+
+            Console.WriteLine("Undo:");
+            cmdManager.Undo();
+        }
+
+        #endregion
 
         private static void ObservableTest()
         {
