@@ -1,13 +1,15 @@
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace OnlineTest
 {
     public class MyCalculation
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             //DecimalOperation();
-            StringsOperation();
+            //StringsOperation();
         }
         
         /// <summary>

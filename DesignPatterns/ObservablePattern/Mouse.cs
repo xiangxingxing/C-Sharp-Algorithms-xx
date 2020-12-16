@@ -9,10 +9,10 @@ namespace DesignPatterns.ObservablePattern
         protected Mouse(string name, Cat cat)
         {
             Name = name;
-            cat.CatAction += MouseOnCatAction;
+            cat.MouseAction += CatActionHandler;
         }
 
-        protected abstract void MouseOnCatAction();
+        protected abstract void CatActionHandler();
     }
 
     public class MikeyMouse : Mouse
@@ -24,7 +24,7 @@ namespace DesignPatterns.ObservablePattern
             _catName = cat.Name;
         }
 
-        protected override void MouseOnCatAction()
+        protected override void CatActionHandler()
         {
             Console.WriteLine($"{Name} mouse runs away when hearing {_catName}'s shouting.");
         }
@@ -39,7 +39,7 @@ namespace DesignPatterns.ObservablePattern
             _catName = cat.Name;
         }
 
-        protected override void MouseOnCatAction()
+        protected override void CatActionHandler()
         {
             Console.WriteLine($"{Name} mouse goes fighting when hearing {_catName}'s shouting.");
         }
@@ -54,7 +54,7 @@ namespace DesignPatterns.ObservablePattern
             _catName = cat.Name;
         }
 
-        protected override void MouseOnCatAction()
+        protected override void CatActionHandler()
         {
             Console.WriteLine($"{Name} mouse finds {_catName} cat to play together.");
         }

@@ -21,11 +21,11 @@ namespace DesignPatterns
              //int[] temp = {};
              //int[] numbers = {1,2,3,4,5,6};
              //temp = numbers.Skip(0).Take(4).ToArray();
-             //ObservableTest();
+             ObservableTest();
              //AbstractFactoryTest();
              //StrategyTest();
              //Bridge2Test();
-             CommandTest();
+             //CommandTest();
         }
 
 
@@ -90,8 +90,8 @@ namespace DesignPatterns
             Mouse white = new WhiteMouse("white", coffee);
             Mouse boolMouse = new BoolMouse("BoolM", boolCat);
             
-            coffee.OnCatAction();
-            boolCat.OnCatAction();
+            coffee.Shout();
+            boolCat.Shout();
         }
 
         private static void SymbolTest()

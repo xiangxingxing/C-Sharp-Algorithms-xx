@@ -11,8 +11,8 @@ namespace DesignPatterns.ObservablePattern
             Name = name;
         }
 
-        public abstract void OnCatAction();
-        public Action CatAction;
+        public abstract void Shout();
+        public Action MouseAction;
     }
 
     public class CoffeeCat : Cat
@@ -21,10 +21,15 @@ namespace DesignPatterns.ObservablePattern
         {
         }
 
-        public override void OnCatAction()
+        public override void Shout()
         {
-            Console.WriteLine($"{Name} start shouting...");
-            CatAction?.Invoke();
+            Console.WriteLine($"{Name} shouting...");
+            OnMouseAction();
+        }
+
+        public virtual void OnMouseAction()
+        {
+            MouseAction?.Invoke();
         }
 
         //public override event Action CatAction;
@@ -36,10 +41,15 @@ namespace DesignPatterns.ObservablePattern
         {
         }
 
-        public override void OnCatAction()
+        public override void Shout()
         {
-            Console.WriteLine($"{Name} start playing...");
-            CatAction?.Invoke();
+            Console.WriteLine($"{Name} shouting...");
+            OnMouseAction();
+        }
+
+        public virtual void OnMouseAction()
+        {
+            MouseAction?.Invoke();
         }
 
         //public override event Action CatAction;
